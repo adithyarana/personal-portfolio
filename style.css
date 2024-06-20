@@ -1,0 +1,1155 @@
+ 
+ /* header css desiging  */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    font-family: 'poppins' , sans-serif;
+}
+
+body{
+    color: #ededed;
+    background: #081b29;
+ 
+}
+
+
+
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 10%;
+     background-color:rgba(0, 238, 255, 0.164); 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+    border-bottom: 3px solid rgb(0, 0, 0);
+    height: 100px;
+}  
+
+
+
+
+
+.logo{
+    position: relative;
+    font-size: 25px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    cursor: default;
+    opacity: 0;
+    animation: slideRight 1s ease forwards;
+    width: 100px;
+    
+    
+}
+
+
+
+/* .navbar a{
+
+    display: inline-block;
+    font-size: 25px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 35px;
+    transition: .3s;
+    font: bold;
+    opacity: 0;
+    animation: slideTop .5s ease forwards;
+    animation-delay: calc(.2s * var(--i));
+    transition: 1s;
+
+
+} 
+
+.navbar a:hover{
+
+    color: #0ef;
+
+} */
+
+/* Container for the navbar */
+.navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent; 
+    padding: 10px 0; 
+}
+
+/* Style for the links inside the navbar */
+.navbar a {
+    display: inline-block;
+    font-size: 25px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 35px;
+    opacity: 0; /* Initially hidden */
+    animation: slideTop .5s ease forwards; /* Slide in animation */
+    animation-delay: calc(.2s * var(--i)); /* Staggered animation */
+    transition: color .3s, transform .3s; /* Smooth transitions */
+    position: relative; /* Required for the pseudo-elements */
+}
+
+/* Hover effect for the links */
+.navbar a:hover {
+    color:#0ef; /* Change color on hover */
+    transform: scale(1.1); /* Slightly enlarge the link on hover */
+}
+
+/* Add a fancy underline on hover */
+.navbar a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -5px; /* Adjust this value to change the distance from the text */
+    width: 100%;
+    height: 3px; /* Height of the underline */
+    background-color: #0f0b0a56; /* Color of the underline */
+    transform: scaleX(0); /* Initially hidden */
+    transform-origin: right;
+    transition: transform .3s ease-out; /* Smooth transition */
+}
+
+.navbar a:hover::after {
+    transform: scaleX(1); /* Show underline on hover */
+    transform-origin: left;
+}
+
+/* Keyframe animation for sliding the links from the top */
+@keyframes slideTop {
+    0% {
+        opacity: 0;
+        transform: translateY(-50px); /* Start from above */
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0); /* End at original position */
+    }
+}
+
+
+.home{
+    position: relative;
+    width: 100%;
+    justify-content: space-between;
+    height: 100vh;   
+    background-image: url(images/adi3.png)  ; 
+   
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    padding: 70px 10% 0;
+    
+}
+
+.home-contact{
+    max-width: 600px;
+}
+
+.home-contact h3{
+    font-size: 32px;
+    font-weight: 700;
+    opacity: 0;
+    animation: slideBottom 1s ease forwards;
+    animation-delay: .7s;
+}
+
+.home-contact h1{
+    font-size: 56px;
+    font-weight: 700;
+    margin: -3px 0;
+    opacity: 0;
+    animation: slideRight 1s ease forwards;
+    animation-delay: 1s;
+}
+
+.home-contact p{
+    font-size: 20px;
+    font-style:italic;
+    opacity: 0;
+    animation: slideleft 1s ease forwards;
+    animation-delay: 1s;
+}
+
+.home-contact span{
+    color: #0ef;
+}
+
+.home-sci a{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background: transparent;
+    border: 2px solid #0ef;
+    border-radius: 50%;
+    font-size: 20px;
+    color: #0ef;
+    text-decoration: none;
+    transition: .5s ease;
+    opacity: 0;
+    animation: slideleft 1s ease forwards;
+    animation-delay: calc(.2s * var(--i));
+    margin: 30px 15px 30px 0;
+}
+
+.home-sci a:hover{
+    background-color: #0ef;
+    color: #081b29;
+    box-shadow: 0 0 20px #0ef;
+}
+
+
+.btn-box {
+    display: inline-block;
+    padding: 12px 28px;
+    background: #0ef;
+    border-radius: 40px;
+    font-size: 16px;
+    color: #081b29;
+    letter-spacing: 1px;
+    text-decoration: none;
+    font-weight: 600;
+    opacity: 0;
+    animation: slideTop 1s ease forwards;
+    animation-delay: 2s;
+    box-shadow: 0 0 5px #0ef, 0 0 25px #0ef;
+}
+
+.btn-box:hover {
+    box-shadow: 0 0 5px cyan, 0 0 15px cyan, 0 0 30px cyan, 0 0 50px cyan, 0 0 75px cyan;
+}
+
+
+/* ANIMATIONS FOR THE HEADER SECTION */
+
+@keyframes slideRight {
+
+    0%{
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+
+    100%{
+        transform: translateX(0px);
+        opacity: 1;
+    }
+    
+}
+
+@keyframes slideleft {
+
+    0%{
+        transform: translateX(100px);
+        opacity: 0;
+    }
+
+    100%{
+        transform: translateX(0px);
+        opacity: 1;
+    }
+    
+}
+
+
+@keyframes slideTop {
+
+    0%{
+        transform: translateY(100px);
+        opacity: 0;
+    }
+
+    100%{
+        transform: translateY(0px);
+        opacity: 1;
+    }
+    
+}
+
+@keyframes slideBottom {
+
+    0%{
+        transform: translateY(-100px);
+        opacity: 0;
+    }
+
+    100%{
+        transform: translateY(0px);
+        opacity: 1;
+    }
+    
+}
+
+
+
+
+
+
+/* css for about section */
+
+.img{
+    height: 400px;
+    width: 320px;
+    padding: 23px;
+    /* margin: 40px; */
+
+    margin-left: 150px;
+    
+    box-shadow: rgba(7, 6, 6, 0.45) 25px 25px 25px -20px;
+   
+
+}
+
+.about{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    gap: 1.5rem;
+    
+}
+
+.about-img img {
+    max-width: 630px;
+    height: auto;
+    border-radius: 8px;
+    transition: transform 0.4s ease-in-out, box-shadow 0.4s ease-in-out;
+   
+}
+
+.about-img img:hover {
+    transform: scale(1.1) rotate(-6deg); /* Zoom and slight rotation */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3); /* Add shadow */
+}
+
+
+.about-text h2{
+    font-size: 60px;
+}
+
+.about-text h2 span{
+
+    color: #0ef;
+
+}
+
+.about-text h4{
+
+    font-size: 29px;
+    font-weight: 600;
+    color: #fff;
+    line-height: 1.7;
+    margin: 15px 0 30px;
+}
+
+.about-text p{
+    color: aliceblue;
+    font-size: 20px;
+    line-height: 1.4;
+    margin-bottom: 4rem;
+    margin-right: 100px;
+}
+
+
+
+
+/* css for the services  */
+
+.services{
+    color: aliceblue;
+    font-size: 20px;
+    line-height: 1.4;
+    margin-bottom: 4rem;
+
+}
+
+.sub_title{
+    text-align: center;
+    font-size: 60px;
+    padding-bottom: 70px;
+}
+
+.sub_title span{
+    color: #0ef;
+}
+
+.container{
+
+padding: 90px;
+}
+
+.services_list{
+
+    display: flex;
+    grid-template-columns: repeat(auto-fit,minmax(259px,1fr));
+    grid-gap: 40px;
+    margin-top: 50px;
+
+}
+
+.services_list div{
+    background-color: transparent;
+    padding: 40px;
+    font-size: 13px;
+    font-weight: 13px;
+    border-radius: 20px;
+    transition: background 0.5s , transform 0.5s;
+    box-shadow: 1px 1px 20px #012290f7 , 1px 1px 40px #0053b8f7;
+}
+
+.services_list div i{
+    font-size: 30px;
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+
+.services_list div a {
+    text-decoration: none;
+    color: #000000;
+    font-size: 12px;
+    margin-top: 20px;
+    display: inline-block;
+}
+
+.read{
+    display: inline-block;
+    padding: 12px 28px;
+    background: #0ef;
+    border-radius: 40px;
+    font-size: 16px;
+    color: #081b29;
+    letter-spacing: 1px;
+    text-decoration: none;
+    font-weight: 600;
+    opacity: 0;
+    animation: slideTop 1s ease forwards;
+    animation-delay: 2s;
+    box-shadow: 0 0 5px #0ef, 0 0 25px #0ef;
+}
+
+.read:hover{
+    box-shadow: 0 0 5px cyan, 0 0 15px cyan, 0 0 30px cyan, 0 0 50px cyan, 0 0 75px cyan;
+}
+
+.services_list div:hover{
+    transform: translateY(-10px);
+}
+
+.services_list h2{
+    font-size: 30px;
+    
+}
+
+.services_list p{
+    font-size: 16px;
+}
+
+
+
+
+
+
+/* skills css */
+
+/* Flex container for section */
+section {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 300px;
+}
+
+/* Styling for container */
+.container1 {
+    width: 600px;
+    height: 500px;
+    padding: 75px 90px;
+    margin-left: 120px;
+}
+
+/* Styling for headings */
+.heading1 {
+    text-align: center;
+    text-decoration: underline;
+    text-underline-offset: 10px;
+    text-decoration-thickness: 5px;
+    margin-bottom: 50px;
+}
+
+/* Styling for bar */
+.bar {
+    font-size: 23px;
+}
+
+/* Styling for technical bars within a container */
+.technical-bars .bar {
+    margin: 40px 0;
+}
+
+.technical-bars .bar:first-child {
+    margin-top: 0;
+}
+
+.technical-bars .bar:last-child {
+    margin-bottom: 0;
+}
+
+.technical-bars .bar .info span {
+    font-size: 17px;
+    font-weight: 500;
+    animation: showtext 0.5s 1s linear forwards;
+    opacity: 0;
+}
+
+/* Styling for subtitles */
+.sub-title {
+    text-align: center;
+    font-size: 50px;
+}
+
+.sub-title span {
+    color: #0ef;
+}
+
+/* Styling for progress line */
+.technical-bars .bar .progress-line {
+    position: relative;
+    border-radius: 10px;
+    width: 100%;
+    height: 5px;
+    background-color: #000;
+    animation: animate 1s cubic-bezier(1, 0, 0.5, 1) forwards;
+    transform: scaleX(0);
+    transform-origin: left;
+}
+
+/* Animation for progress line */
+@keyframes animate {
+    100% {
+        transform: scaleX(1);
+    }
+}
+
+/* Styling for progress line span */
+.technical-bars .bar .progress-line span {
+    height: 100%;
+    background-color: #0ef;
+    position: absolute;
+    border-radius: 10px;
+    animation: animate 1s 1s cubic-bezier(1, 0, 0.5, 1) forwards;
+    transform: scaleX(0);
+    transform-origin: left;
+}
+
+.progress-line.html span{
+    width: 90%;
+}
+
+.progress-line.css span{
+    width: 70%;
+}
+
+.progress-line.JavaScrip span{
+    width: 50%;
+}
+
+.progress-line.c-plus-plus span{
+    width: 80%;
+}
+
+.progress-line.Python span{
+    width: 60%;
+}
+
+.progress-line.postgresql span{
+    width: 75%;
+}
+
+.progress-line span::after{
+    position: absolute;
+    padding: 1px 8px;
+    background-color: #000;
+    color: #fff;
+    font-size: 12px;
+    border-radius: 3px;
+    top: -28px;
+    right: -20px;
+    animation: showtext 0.5s 1.5s linear forwards;
+    opacity: 0;
+
+}
+
+.progress-line.html span::after{
+    content: "90%";
+}
+
+.progress-line.css span::after{
+    content: "70%";
+}
+
+.progress-line.JavaScrip span::after{
+    content: "50%";
+}
+
+.progress-line.c-plus-plus span::after{
+    content: "80%";
+}
+
+.progress-line.Python span::after{
+    content: "60%";
+}
+
+.progress-line.postgresql span::after{
+    content: "75%";
+}
+
+.progress-line span::before{
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0;
+    border: 7px solid transparent;
+    border-bottom-width: 0px;
+    border-right-width: 0px;
+    border-top-color: #000;
+    top: -10px;
+    right: 0;
+    animation: showtext 0.5s 1.5s linear forwards;
+    opacity: 0;
+}
+
+@keyframes showtext {
+
+    100%{
+        opacity: 1;
+    }
+    
+}
+
+.radical-bars {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: flex-start;
+}
+
+.radical-bars .radical-bar {
+    width: calc(50% - 40px); /* Adjust width to account for larger margins */
+    height: 170px;
+    margin: 20px; /* Increased margin to create more gaps */
+    position: relative;
+}
+
+.radical-bars .radical-bar svg {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(-90deg);
+    width: 200px;
+    height: 200px;
+}
+
+.radical-bars .radical-bar .progress-bar {
+    stroke-width: 10;
+    stroke: black;
+    fill: transparent;
+    stroke-dasharray: 502;
+    stroke-dashoffset: 502;
+    stroke-linecap: round;
+    animation: animate-bar 1s linear forwards;
+}
+
+@keyframes animate-bar {
+    100% {
+        stroke-dashoffset: 0;
+    }
+}
+
+.path {
+    stroke-width: 6;
+    stroke: #0ef;
+    fill: transparent;
+    stroke-dasharray: 502;
+    stroke-dashoffset: 502;
+    stroke-linecap: round;
+}
+
+.path-1 { animation: animate-path1 1s 1s linear forwards; }
+.path-2 { animation: animate-path2 1s 1s linear forwards; }
+.path-3 { animation: animate-path3 1s 1s linear forwards; }
+.path-4 { animation: animate-path4 1s 1s linear forwards; }
+
+@keyframes animate-path1 {
+    100% { stroke-dashoffset: 50; }
+}
+
+@keyframes animate-path2 {
+    100% { stroke-dashoffset: 175; }
+}
+
+@keyframes animate-path3 {
+    100% { stroke-dashoffset: 125; }
+}
+
+@keyframes animate-path4 {
+    100% { stroke-dashoffset: 75; }
+}
+
+.radical-bar .percentage{
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    font-size: 17px;
+    font-weight: 500;
+    animation: showtext 0.5s 1s linear forwards;
+    opacity: 0;
+}
+
+.radical-bar .text{
+    width: 100%;
+    position: absolute;
+    text-align: center;
+    left: 30%;
+    bottom: -30px;
+    transform: translateX(-50px);
+    font-size: 18px;
+    font-weight: 500;
+    animation: showtext 0.5s 1s linear forwards;
+    opacity: 0;
+    
+   
+}
+
+
+
+/* sytle for projects */
+
+/* Main Text Section */
+.main-text {
+    padding-top: 130px;
+    margin-top: 200px;
+    margin-left: 350px;
+}
+
+.main-text h2 {
+    font-size: 60px;
+    line-height: 1;
+    text-align: center;
+    margin: 40px;
+    margin-left: 150px;
+}
+
+.main-text h2 span {
+    color: #0ef;
+}
+
+/* Portfolio Content */
+.portfolio-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(359px, auto));
+    gap: 50px; /* Increased gap between items */
+    justify-content: center;
+}
+
+/* Row Styling */
+.row {
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.5s;
+}
+
+.row img {
+    width: 110%;
+    height: 100%;
+    border-radius: 8px;
+    display: block;
+    transition: transform 0.5s;
+    
+}
+
+.row:hover img {
+    transform: scale(1.1);
+}
+
+/* Layer Overlay */
+.layer {
+    width: 100%;
+    height: 0;
+    background: linear-gradient(rgba(250, 28, 28, 0.1), #0ef);
+    position: absolute;
+    border-radius: 8px;
+    left: 0;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0 40px;
+    overflow: hidden; /* Ensure text is hidden */
+    transition: height 0.5s;
+}
+
+.row:hover .layer {
+    height: 100%;
+}
+
+.layer h5, .layer p, .layer i {
+    opacity: 0; /* Hide text by default */
+    transition: opacity 0.5s; /* Smooth transition for opacity */
+}
+
+.row:hover .layer h5, 
+.row:hover .layer p, 
+.row:hover .layer i {
+    opacity: 1; /* Show text on hover */
+}
+
+.layer h5 {
+    color: #000000;
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.layer p {
+    color: black;
+    font-size: 1rem;
+    line-height: 1.8;
+    margin: 0;
+}
+
+.layer i {
+    color: #ff004f;
+    margin-top: 20px;
+    font-size: 20px;
+    background:#0ef;
+    background-color: #00000056;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+}
+
+
+
+/* contact css */
+
+.contact{
+    display: grid;
+    grid-template-columns: repeat(2 ,1fr);
+    align-items: center;
+    gap: 3rem;
+    padding-left: 30px;
+    margin-top: 130px;
+}
+
+.contact-text h2{
+    font-size: 90px;
+    line-height: 1;
+    text-align: center;
+
+}
+
+.contact-text h2 span{
+    color: #0ef;
+    
+}
+
+.contact-text h4{
+    margin: 15px 0;
+    color: rgb(228, 228, 228);
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.contact-text p{
+    color: rgb(177, 177, 177);
+    font-size: 20PX;
+    line-height: 30PX;
+    margin-bottom: 2rem;
+}
+
+.contact-list{
+
+    margin-bottom: 3rem;
+}
+
+.contact-list li{
+    margin-bottom: 10px;
+    display: block;
+}
+
+.contact-list i{
+
+    display: inline-block;
+    color: #0ef;
+    font-size: 20px;
+    font-weight: 600;
+    transition: all  .40s ease;
+    margin: 10px;
+}
+
+.contact-list li:hover{
+    transform: scale(1.01) translateY(-5px);
+    color: #0ef;
+}
+
+.contact-icons i{
+
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background: transparent;
+    border: 2px solid #0ef;
+    border-radius: 50%;
+    font-size: 20px;
+    color: #0ef;
+    text-decoration: none;
+    margin: 30px 15px 30px 0;
+    /* transition:  .5s ease;
+    opacity: 0;
+    animation: slideleft 1s ease forwards;
+     animation-delay:calc(.2s * var(--i)) ; */
+
+}
+
+.contact-icons i:hover{
+    background: #0ef;
+    color: #000;
+    box-shadow: 0 0 20px #0ef;
+}
+
+.contact-form form{
+    position: relative;
+}
+
+.contact-form form input , form textarea{
+
+    border: none;
+    outline: none;
+    width: 90%;
+    padding: 18px;
+    background: #555557;
+    color: #000;
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    border-radius: 0.5rem;
+
+}
+
+.contact-form textarea{
+    resize: none;
+    height: 220px;
+}
+
+.contact-form form .send{
+
+    display: inline-block;
+    padding: 14px 60px;
+    background: #0ef;
+    border-radius: 40px;
+    font-size: 18px;
+    color: #081b29;
+    letter-spacing: 1px;
+    text-decoration: none;
+    font-weight: 600;
+    opacity: 0;
+    animation: slideTop 1s ease forwards;
+    animation-delay: 2s;
+    box-shadow: 0 0 5px #0ef, 0 0 25px #0ef;
+}
+
+.contact-form form .send:hover{
+    box-shadow: 0 0 5px cyan, 0 0 15px cyan, 0 0 30px cyan, 0 0 50px cyan, 0 0 75px cyan;
+}
+
+.last-text p{
+
+    width: 100%;
+    text-align: center;
+    padding: 25px 0;
+    background: rgb(7, 85, 91);
+    font-weight: 300;
+    margin-top: 70px;
+}
+
+.top{
+    position:fixed;
+    bottom: 2.1rem;
+    right: 2.1rem;
+}
+
+.top i{
+    color: #000;
+    background: rgb(250, 246, 247);
+    font-size: 20px;
+    padding: 10px;
+    border-radius: 0.5rem;
+}
+
+
+
+/* to make page responsive */
+
+@media only screen and (max-width: 768px) {
+    .header {
+        display: flex;
+        flex-direction: row; 
+        /* Stack elements vertically */
+        align-items: center; /* Center align items vertically */
+        padding: 1px 1%; /* Reduced padding */
+        height: 100px; /* Ensure auto height */
+        justify-content: center;
+         /* Center the content */
+    }
+
+    .logo {
+        order: 1; /* Order the logo second */
+        font-size: 14px; /* Adjusted smaller font size */
+        margin: -10px 0 0 0; /* Adjusted margin to move it slightly up */
+        float: left; /* Align to the left side */
+        margin-right: 70px;
+        
+    }
+    
+
+    .navbar {
+        order: 1; /* Order the navbar first */
+        display: flex;
+        flex-direction: row; /* Keep in a row */
+        align-items: center; /* Center align items */
+        padding: 0; /* Remove padding */
+    }
+
+    .navbar a {
+        font-size: 14px; /* Smaller font size */
+        margin: 0 5px; /* Reduced margin */
+        padding: 5px 10px; /* Reduced padding */
+    }
+
+    .home {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 40px 5% 0;
+        margin-top: 50px; /* Adjusted margin to move it further down */
+    }
+
+    .home-contact {
+        width: 100%;
+        padding: 0 5%;
+        margin-top: 20px; /* Added margin to further separate it */
+    }
+
+    .home-contact h3 {
+        font-size: 28px;
+    }
+
+    .home-contact h1 {
+        font-size: 40px;
+    }
+
+    .home-contact p {
+        font-size: 18px;
+    }
+
+    .img {
+        height: 200px;
+        width: 160px;
+        margin-left: 0;
+    }
+
+    .about {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .about-text h2 {
+        font-size: 40px;
+    }
+
+    .about-text h4, .about-text p {
+        font-size: 18px;
+    }
+
+    .container {
+        padding: 20px;
+    }
+
+    .services_list {
+        flex-direction: column;
+    }
+
+    .services_list div {
+        margin-bottom: 20px;
+    }
+
+    .container1 {
+        width: 100%;
+        padding: 20px;
+        margin: 0;
+    }
+
+    .main-text {
+        padding-top: 70px;
+        margin: 50px 0;
+    }
+
+    .main-text h2 {
+        font-size: 40px;
+        margin: 20px 0;
+    }
+
+    .portfolio-content {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .contact {
+        grid-template-columns: 1fr;
+        padding-left: 10px;
+    }
+
+    .contact-text h2 {
+        font-size: 50px;
+    }
+
+    .contact-text h4, .contact-text p {
+        font-size: 18px;
+    }
+
+    .contact-form form input, .contact-form form textarea {
+        width: 100%;
+        padding: 10px;
+        font-size: 16px;
+    }
+
+    .contact-form textarea {
+        height: 150px;
+    }
+
+    .contact-form form .send {
+        padding: 10px 30px;
+        font-size: 16px;
+    }
+}
